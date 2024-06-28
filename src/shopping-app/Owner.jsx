@@ -7,8 +7,6 @@ function Owner() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-
-
   async function handleSubmit(e){
    e.preventDefault();
    try{

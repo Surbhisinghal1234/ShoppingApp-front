@@ -7,8 +7,6 @@ function User() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-
-
   async function handleSubmit(e){
    e.preventDefault();
    try{
@@ -16,16 +14,16 @@ function User() {
        {
         fullName, email,password,
       });
-      console.log(res.data,"owner created sucessfully")
-      setMessage("owner created")
+      console.log(res.data,"sucessful")
+      setMessage("Logged in ")
+      window.location.href = "/login"
 
   } catch(err){
     setMessage("error",err)
-  }
-  }
+  }}
   return (
    <>
-          <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                 <h1 className="text-2xl font-bold mb-6">Create User</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">

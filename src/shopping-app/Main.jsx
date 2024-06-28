@@ -3,6 +3,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Owner from "./Owner";
 import "../index.css"
 import User from "./User";
+import Login from "./Login";
+import Shop from "./Shop";
 
 function main() {
   const router = createBrowserRouter([
@@ -10,15 +12,23 @@ function main() {
       path: "/",
       element: (
         <>
-          <Owner />
+          <User/>
         </>
       ),
     },
     {
-      path: "/user",
+      path: "/login",
       element: (
         <>
-          <User />
+          <Login/>
+        </>
+      ),
+    },
+    {
+      path: "/shop",
+      element: (
+        <>
+         <Shop/>
         </>
       ),
     },
@@ -30,5 +40,4 @@ function main() {
     </>
   );
 }
-
 export default main;
